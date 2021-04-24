@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+
+  "name": "AIO",
+  "version": "0.2.0",
+  "description": "All In One-Adblock, Dark mode, Appearance, many more...",
+
+
+  "background": {
+    "scripts": ["js/adblc.js"]
+  },
+
+  "browser_action": {
+    "default_popup" : "popup.html",
+    "default_icon" : "logos/logo128x128.png"
+  },
+
+  "icons": {
+      "16": "logos/logo16x16.png",
+      "32": "logos/logo32x32.png",
+      "48": "logos/logo48x48.png",
+      "128": "logos/logo128x128.png"
+    },
+  "permissions": [
+        "activeTab",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>", 
+        "storage",
+        "tabs"         
+    ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Alt+P",
+        "mac": "Alt+P",
+        "chromeos": "Alt+P",
+        "linux": "Alt+P"
+      }
+    }
+  },
+  "content_scripts": [{
+    "css": ["css/thistab.css"],
+    "js": ["js/thistab.js"],
+    "matches": ["<all_urls>"]
+  }]
+}

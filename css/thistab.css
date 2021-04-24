@@ -1,0 +1,13 @@
+  .dar img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+  .dar img:hover {
+    opacity: 1;
+  }
+.dar,
+.dar * {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
